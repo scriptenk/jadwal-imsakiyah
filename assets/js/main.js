@@ -160,7 +160,7 @@ function getDataTime(stateId, cityId) {
     .join("");
   console.log("cityId : ", cityId);
   fetch(
-    `https://imsakiyah-api.santrikoding.com/imsyakiyah?state=${stateId}&city=${cityId}&year=2022`
+    `https://imsakiyah-api.santrikoding.com/imsyakiyah?state=${stateId}&city=${cityId}&year=2023`
   )
     .then((response) => response.json())
     .then((result) => renderCard(result.data))
@@ -176,7 +176,7 @@ function renderCard(data) {
 
   data.forEach((time, i) => {
     // const newRow = `<tr>
-    //     <th>${i + 1} <br> Ramadhan 1443H</th>
+    //     <th>${i + 1} <br> Ramadhan 1444 H</th>
     //     <td>${time.date}</td>
     //     <td>${time.imsak}</td>
     //     <td>${time.subuh}</td>
@@ -191,7 +191,7 @@ function renderCard(data) {
     <div class="col-10 col-md-4 mb-4">
             <div class=" card card-time">
               <div class="card-body text-center">
-                <h5 class="card-title fw-bold">${i + 1} Ramadhan 1443 H</h5>
+                <h5 class="card-title fw-bold">${i + 1} Ramadhan 1444 H</h5>
                 <h6 class="card-subtitle mb-3">
                 ${time.date}
                 </h6>

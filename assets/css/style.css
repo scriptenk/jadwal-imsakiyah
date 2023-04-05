@@ -1,16 +1,16 @@
 /* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Sriracha&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Lobster&display=swap");
+ 
 /* variables */
 :root {
   /* font family */
-  --header-font: "Sriracha", cursive;
+  --header-font: "Lobster", cursive;
   --primary-font: "Quicksand", sans-serif;
 
   /* colors */
-  --primary-color: #072315;
+  --primary-color: #006666;
   --text-color-primary: #ffe600;
-  --loading-color: #47d68f;
+  --loading-color: #008c8c;
 }
 
 /* style */

@@ -2,33 +2,11 @@
 // === Star decor ===
 // ==================
 
-function createStars() {
-  const section = document.querySelector(".decor");
-  let newImgElement = document.createElement("img");
-  newImgElement.setAttribute("src", "assets/img/star.svg");
-  newImgElement.classList.add("star");
-  let size = Math.random() * 60;
-
-  newImgElement.style.width = 20 + size + "px";
-  newImgElement.style.height = 20 + size + "px";
-  newImgElement.style.left = Math.random() * window.innerWidth + "px";
-  newImgElement.style.animationDuration = Math.random() * 10 + 4 + "s";
-
-  section.appendChild(newImgElement);
-
-  setTimeout(() => {
-    newImgElement.remove();
-  }, 5000);
-}
-
-setInterval(() => {
-  createStars();
-}, 250);
 
 let stateId =
-  "TbkUaheAPnaQULadXeJYPm%2BIHrGUY6Oh%2Bdiey0pu%2BsD%2BdUXJzKg5FxufrgIOe1Kk97nZFwXZiuAFrcFLuHSjHg%3D%3D";
+  "%2F3sM%2BuQyYUEpEKzZXZ7E5w7WPYs5rhjiD%2FVDOKmW5jF0KTSu%2FP17rwFivdZ5VsHOSgA2dxJ58urghNHh6ws4%2Fg%3D%3D";
 let cityId =
-  "frXe8%2FL8h6MmAOfrfXp327ACXkyr%2BgLjHpGkSvUvALqLIwoNx%2BnTh8QBTRdIaWTe07yXoBpe7BLs%2BriSdHZmgw%3D%3D";
+  "VLQMpXZBwV5mBZIrgDyVFzeryCExP2SOooEaaiWJz%2F1Tnr54251IjyyZu%2Fe39yQCcPGZlTynHWb2UkiRcdgSAA%3D%3D";
 
 // =============================
 // === do this on first load ===
@@ -56,10 +34,10 @@ function showStatesList(data) {
 
   data.forEach((state) => {
     if (state.name == "PUSAT") return;
-    if (state.name == "SULAWESI SELATAN") {
+    if (state.name == "DKI JAKARTA") {
       stateId = state.id;
     }
-    let selected = state.name == "SULAWESI SELATAN" ? "selected" : "";
+    let selected = state.name == "DKI JAKARTA" ? "selected" : "";
     let newOptionElement = `<option value="${state.id}_${state.name}" ${selected}>${state.name}</option>`;
 
     stateList.insertAdjacentHTML("beforeend", newOptionElement);
@@ -110,10 +88,10 @@ function showCityList(data) {
   cityList.innerHTML = "";
 
   data.forEach((city) => {
-    if (city.name == "KAB. WAJO") {
+    if (city.name == "KOTA JAKARTA") {
       cityId = city.id;
     }
-    let selected = city.name == "KAB. WAJO" ? "selected" : "";
+    let selected = city.name == "KOTA JAKARTA" ? "selected" : "";
     let newOptionElement = `<option value="${city.id}_${city.name}" ${selected}>${city.name}</option>`;
 
     cityList.insertAdjacentHTML("beforeend", newOptionElement);
@@ -180,7 +158,6 @@ function renderCard(data) {
     //     <td>${time.date}</td>
     //     <td>${time.imsak}</td>
     //     <td>${time.subuh}</td>
-    //     <td>${time.dhuha}</td>
     //     <td>${time.dzuhur}</td>
     //     <td>${time.ashar}</td>
     //     <td>${time.maghrib}</td>
@@ -203,10 +180,6 @@ function renderCard(data) {
                   <div class="col-4">
                     <p class="title-time fw-bold">Subuh</p>
                     <p class="time">${time.subuh}</p>
-                  </div>
-                  <div class="col-4">
-                    <p class="title-time fw-bold">Dhuha</p>
-                    <p class="time">${time.dhuha}</p>
                   </div>
                   <div class="col-4">
                     <p class="title-time fw-bold">Dzuhur</p>
